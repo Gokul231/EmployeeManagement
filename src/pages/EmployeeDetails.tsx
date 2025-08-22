@@ -12,7 +12,7 @@ const EmployeeDetails: React.FC = () => {
     useEffect(() => {
         const fetchEmployee = async () => {
             try {
-                const data = await getEmployeeById(id);
+                const data = await getEmployeeById(Number(id));
                 setEmployee(data);
             } catch (err) {
                 setError('Failed to fetch employee details');
